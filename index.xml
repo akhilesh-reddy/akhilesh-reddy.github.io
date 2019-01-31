@@ -11,6 +11,26 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How Twitter does it? Challenges in implementing recommender systems at scale</title>
+      <link>https://akhilesh-reddy.github.io/post/twitter/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/twitter/</guid>
+      <description>&lt;p&gt;This article is originally published in Towards Data science. Click &lt;a href=&#34;https://towardsdatascience.com/how-twitter-does-it-challenges-in-implementing-recommender-systems-at-scale-353f7a1ae4ab&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to read the article.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scraping Reddit data using Python and Google BigQuery</title>
+      <link>https://akhilesh-reddy.github.io/post/medium/</link>
+      <pubDate>Sat, 26 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/medium/</guid>
+      <description>&lt;p&gt;This article is originally published in Towards Data science. Click &lt;a href=&#34;https://towardsdatascience.com/scrape-reddit-data-using-python-and-google-bigquery-44180b579892&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to read the article.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>ML Algorithms 4:Introduction to Boosting and the famous XGBoost</title>
       <link>https://akhilesh-reddy.github.io/post/xgboost-and-lightxgboost/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 -0600</pubDate>
@@ -93,7 +113,7 @@ It employs the concept of cache optimization which makes it more efficient&lt;/p
 1.Sparse aware: It automatic handling of missign data values&lt;br /&gt;
 2.Block structure: It supports parallelization of tree structures as mentioned already in the system features&lt;/p&gt;
 
-&lt;p&gt;Key points to remember while running an XGBoost model:
+&lt;p&gt;&lt;strong&gt;Key points to remember while running an XGBoost model:&lt;/strong&gt;&lt;br /&gt;
 1. Avoid overfitting by using early stopping&lt;br /&gt;
 2. Use cross validation while pruning the trees&lt;br /&gt;
 3. Use xgb.Dmatrix to create train and test datasets&lt;br /&gt;
@@ -233,11 +253,20 @@ print(paste0(&amp;quot;Accuracy is &amp;quot;, rf_accuracy))
     </item>
     
     <item>
-      <title>Sketch recognition through deep learning</title>
+      <title>Sketch recognition using Mobilenet</title>
       <link>https://akhilesh-reddy.github.io/project/sketch-recognition/</link>
       <pubDate>Sat, 19 Jan 2019 06:31:29 -0500</pubDate>
       
       <guid>https://akhilesh-reddy.github.io/project/sketch-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualizing different factors that affect Austin bike sharing and recommendations for bike rebalancing </title>
+      <link>https://akhilesh-reddy.github.io/project/austin-bike-sharing/</link>
+      <pubDate>Sat, 19 Jan 2019 06:31:29 -0500</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/project/austin-bike-sharing/</guid>
       <description></description>
     </item>
     
@@ -301,7 +330,16 @@ This method is more technically called &amp;ldquo;Cost-complexity pruning&amp;rd
     </item>
     
     <item>
-      <title>Salary prediction based on job description</title>
+      <title>Cable-cord cutter sentiment analysis using Reddit data</title>
+      <link>https://akhilesh-reddy.github.io/project/cable-cord-cutters-sentiment-analysis-using-reddit-data/</link>
+      <pubDate>Fri, 18 Jan 2019 06:31:29 -0500</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/project/cable-cord-cutters-sentiment-analysis-using-reddit-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Salary prediction based on job description using XGboost</title>
       <link>https://akhilesh-reddy.github.io/project/salary-prediction-based-on-job-description/</link>
       <pubDate>Fri, 18 Jan 2019 06:31:29 -0500</pubDate>
       
@@ -332,7 +370,7 @@ In this post, i would be talking about logistic regression which is still very w
 &lt;h3 id=&#34;mathematical-explanation&#34;&gt;Mathematical explanation&lt;/h3&gt;
 
 &lt;p&gt;Following is a logit function in a matrix form with X being the independent variable matrix and Y being the probability value.
-$${Pr}(Y=1/ {X}) = \frac{\text{e}^{\beta X}}{1 + \text{e}^{\beta X}}$$&lt;br/&gt;&lt;/p&gt;
+$${Pr}(Y=1/ {X}) = \frac{\text{e}^{\beta X}}{1 + \text{e}^{\beta X}}$$&lt;br/&gt;``&lt;/p&gt;
 
 &lt;p&gt;It is also called sigmoid function.
 &lt;img src=&#34;https://akhilesh-reddy.github.io/img/sigmoid.png&#34; alt=&#34;sigmoid&#34; /&gt;&lt;/p&gt;
@@ -441,7 +479,7 @@ auc_ROCR
     </item>
     
     <item>
-      <title>Association between retail items</title>
+      <title>Association between grocery items using Apriori algorithm and Gephi visualization</title>
       <link>https://akhilesh-reddy.github.io/project/association-between-retail-items/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
@@ -450,7 +488,7 @@ auc_ROCR
     </item>
     
     <item>
-      <title>Author attribution</title>
+      <title>Author attribution using TF-IDF, PCA and Randomforest</title>
       <link>https://akhilesh-reddy.github.io/project/author-attribution/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
@@ -468,20 +506,11 @@ auc_ROCR
     </item>
     
     <item>
-      <title>Test time prediction for Mercedes Benz using regression techniques</title>
+      <title>Test time prediction for Mercedes Benz using XGboost</title>
       <link>https://akhilesh-reddy.github.io/project/predicting-the-testing-time-of-mercedes-benz/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
       <guid>https://akhilesh-reddy.github.io/project/predicting-the-testing-time-of-mercedes-benz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding the market potential from customer tweets</title>
-      <link>https://akhilesh-reddy.github.io/project/market-segmentation/</link>
-      <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/project/market-segmentation/</guid>
       <description></description>
     </item>
     

@@ -13,7 +13,16 @@
     
     
     <item>
-      <title>Salary prediction based on job description</title>
+      <title>Cable-cord cutter sentiment analysis using Reddit data</title>
+      <link>https://akhilesh-reddy.github.io/project/cable-cord-cutters-sentiment-analysis-using-reddit-data/</link>
+      <pubDate>Fri, 18 Jan 2019 06:31:29 -0500</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/project/cable-cord-cutters-sentiment-analysis-using-reddit-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Salary prediction based on job description using XGboost</title>
       <link>https://akhilesh-reddy.github.io/project/salary-prediction-based-on-job-description/</link>
       <pubDate>Fri, 18 Jan 2019 06:31:29 -0500</pubDate>
       
@@ -22,7 +31,7 @@
     </item>
     
     <item>
-      <title>Author attribution</title>
+      <title>Author attribution using TF-IDF, PCA and Randomforest</title>
       <link>https://akhilesh-reddy.github.io/project/author-attribution/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       

@@ -22,7 +22,16 @@
     </item>
     
     <item>
-      <title>Association between retail items</title>
+      <title>Visualizing different factors that affect Austin bike sharing and recommendations for bike rebalancing </title>
+      <link>https://akhilesh-reddy.github.io/project/austin-bike-sharing/</link>
+      <pubDate>Sat, 19 Jan 2019 06:31:29 -0500</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/project/austin-bike-sharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Association between grocery items using Apriori algorithm and Gephi visualization</title>
       <link>https://akhilesh-reddy.github.io/project/association-between-retail-items/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
@@ -31,7 +40,7 @@
     </item>
     
     <item>
-      <title>Test time prediction for Mercedes Benz using regression techniques</title>
+      <title>Test time prediction for Mercedes Benz using XGboost</title>
       <link>https://akhilesh-reddy.github.io/project/predicting-the-testing-time-of-mercedes-benz/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
@@ -40,7 +49,7 @@
     </item>
     
     <item>
-      <title>Understanding the market potential from customer tweets</title>
+      <title>Understanding the market potential from customer tweets using k-means clustering</title>
       <link>https://akhilesh-reddy.github.io/project/market-segmentation/</link>
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       

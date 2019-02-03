@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Sketch recognition using Mobilenet</title>
+      <link>https://akhilesh-reddy.github.io/post/sketch-recognition/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/sketch-recognition/</guid>
+      <description>This article is originally published in Towards Data science. Click here to read the article.</description>
+    </item>
+    
+    <item>
       <title>Scraping Reddit data using Python and Google BigQuery</title>
       <link>https://akhilesh-reddy.github.io/post/medium/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 -0600</pubDate>
@@ -68,24 +77,6 @@ Introduction Decision trees are a class of machine learning algorithms that deci
       <guid>https://akhilesh-reddy.github.io/post/logistic-regression/</guid>
       <description>This is my first post of a series of summaries of machine learning algorithms. I personally took this up to challenge myself to enhance my skill in communciating machine learning and statistical concepts to others. In this post, i would be talking about logistic regression which is still very widely used for classification in multiple industries.
 Introduction Logistic regression is primarily a binary classifier which is used when the dependent variable is a categorical variable.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://akhilesh-reddy.github.io/post/eda_henry-edited-akhil/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/post/eda_henry-edited-akhil/</guid>
-      <description>from datetime import * from gmplot import gmplot import pandas as pd %pylab inline import matplotlib.pyplot as plt import seaborn as sns from matplotlib.pyplot import figure  Populating the interactive namespace from numpy and matplotlib C:\Users\Akhil\Anaconda2\lib\site-packages\IPython\core\magics\pylab.py:161: UserWarning: pylab import has clobbered these variables: [&#39;datetime&#39;, &#39;time&#39;] `%matplotlib` prevents importing * from pylab and numpy &amp;quot;\n`%matplotlib` prevents importing * from pylab and numpy&amp;quot;  train = pd.DataFrame({&#39;id&#39;:[1,2,4],&#39;features&#39;:[[&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;],[&amp;quot;A&amp;quot;,&amp;quot;D&amp;quot;,&amp;quot;E&amp;quot;],[&amp;quot;C&amp;quot;,&amp;quot;D&amp;quot;,&amp;quot;F&amp;quot;]]})  train[&#39;features_t&#39;] = train[&amp;quot;features&amp;quot;].apply(lambda x: &amp;quot; &amp;quot;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://akhilesh-reddy.github.io/post/austin/austin-bike-sharing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/post/austin/austin-bike-sharing/</guid>
-      <description>Austin Bike Sharing Austin Bike sharing came out to be an interesting problem when my team was looking out for something that will have a higher level impact on our daily life in Austin.The value of this problem comes from the fact that it seeks to find a potential solution to a problem that has been plaguing Austin for years and will only continue to get worse: Traffic. This problem is most certainly applicable to not only the broad audience of citizens of Travis County, but can also be extended to other large metropolitan areas that suffer from similar traffic congestion, such as: Los Angeles, New York City, Atlanta, and may more.</description>
     </item>
     
   </channel>

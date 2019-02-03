@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>Sketch recognition using Mobilenet</title>
+      <link>https://akhilesh-reddy.github.io/post/sketch-recognition/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/sketch-recognition/</guid>
+      <description>&lt;p&gt;This article is originally published in Towards Data science. Click &lt;a href=&#34;https://towardsdatascience.com/doodling-with-deep-learning-1b0e11b858aa&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to read the article.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Scraping Reddit data using Python and Google BigQuery</title>
       <link>https://akhilesh-reddy.github.io/post/medium/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 -0600</pubDate>
@@ -502,15 +512,6 @@ auc_ROCR
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
       <guid>https://akhilesh-reddy.github.io/project/edmunds-and-car-brand-association/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test time prediction for Mercedes Benz using XGboost</title>
-      <link>https://akhilesh-reddy.github.io/project/predicting-the-testing-time-of-mercedes-benz/</link>
-      <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/project/predicting-the-testing-time-of-mercedes-benz/</guid>
       <description></description>
     </item>
     

@@ -11,6 +11,16 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Recommender system using Bayesian personalized ranking</title>
+      <link>https://akhilesh-reddy.github.io/post/bpr/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/bpr/</guid>
+      <description>&lt;p&gt;This article is originally published in Towards Data science. Click &lt;a href=&#34;https://towardsdatascience.com/recommender-system-using-bayesian-personalized-ranking-d30e98bba0b9&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to read the article.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How Twitter does it? Challenges in implementing recommender systems at scale</title>
       <link>https://akhilesh-reddy.github.io/post/twitter/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 -0600</pubDate>
@@ -503,15 +513,6 @@ auc_ROCR
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
       <guid>https://akhilesh-reddy.github.io/project/author-attribution/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Car brand association analysis using web scraped data</title>
-      <link>https://akhilesh-reddy.github.io/project/edmunds-and-car-brand-association/</link>
-      <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/project/edmunds-and-car-brand-association/</guid>
       <description></description>
     </item>
     

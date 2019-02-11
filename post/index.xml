@@ -79,6 +79,15 @@ Introduction Decision trees are a class of machine learning algorithms that deci
     </item>
     
     <item>
+      <title>Statistics 1: Basics and implementation in python</title>
+      <link>https://akhilesh-reddy.github.io/post/statistics/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/statistics/</guid>
+      <description>Often, we get overwhelmed by the breadth of the data science and do not give much emphasis on the basics as much as we shoould. In this post, i will go through the fundamental concepts of statistical analysis. We will have the implementation of these concepts in python so that we also have a hands-on experience while revisiting the concepts. Before getting into the concepts, lets look into some housekeeping things.</description>
+    </item>
+    
+    <item>
       <title>ML Algorithms 1:Logistic Regression</title>
       <link>https://akhilesh-reddy.github.io/post/logistic-regression/</link>
       <pubDate>Sun, 13 Jan 2019 00:00:00 -0600</pubDate>

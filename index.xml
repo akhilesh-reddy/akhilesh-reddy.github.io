@@ -368,6 +368,261 @@ This method is more technically called &amp;ldquo;Cost-complexity pruning&amp;rd
     </item>
     
     <item>
+      <title>Statistics 1: Basics and implementation in python</title>
+      <link>https://akhilesh-reddy.github.io/post/statistics/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 -0600</pubDate>
+      
+      <guid>https://akhilesh-reddy.github.io/post/statistics/</guid>
+      <description>
+
+&lt;p&gt;Often, we get overwhelmed by the breadth of the data science and do not give much emphasis on the basics as much as we shoould. In this post, i will go through the fundamental concepts of statistical analysis.
+We will have the implementation of these concepts in python so that we also have a hands-on experience while revisiting the concepts.
+Before getting into the concepts, lets look into some housekeeping things.&lt;br /&gt;
+1. I will be using python 3.6.5 for this exercise&lt;br /&gt;
+2. IDE would be Jupyter notebook&lt;br /&gt;
+3. You will need to install scipy.stats package&lt;br /&gt;
+    Use pip install scipy if it is not already installed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#To install directly from Jupyter notebook
+!pip install scipy
+!pip install statistics
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;measures-of-central-tendency&#34;&gt;Measures of Central tendency:&lt;/h2&gt;
+
+&lt;h3 id=&#34;mean&#34;&gt;Mean:&lt;/h3&gt;
+
+&lt;p&gt;Given a distribution of numbers describing a particular event, the average of all those numbers would be the mean of that distribution.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://akhilesh-reddy.github.io/img/mean.png&#34; width=&#34;120&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;You will notice that there are multiple libraries for performing statistics operations. I will illustrate most of them so that you know what all are out there.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# x can be a series or a column from a dataframe but the syntax will remain same. I will be taking the values in a list to keep it simple for illustration
+x = [1,2,3,4,5]
+
+
+# Using numpy
+print(&#39;Mean using numpy:&#39;,np.mean(x))
+
+# Using scipy
+print(&#39;Mean using scipy:&#39;,scipy.mean(x))
+
+# Using statistics module in python
+print(&#39;Mean using statistics module:&#39;,statistics.mean(x))  
+
+Output:  
+Mean using numpy: 3.0
+Mean using scipy: 3.0
+Mean using statistics module: 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;median-and-mode&#34;&gt;Median and Mode:&lt;/h3&gt;
+
+&lt;p&gt;Median is the 50th percentile value in a distribution whereas mode is the value with highest frequency within a distribution.
+Both have syntax similar to that of mean. I will be using an illustration from one module to show the code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x = [1,2,3,4,5,5,5]
+
+# Using scipy
+print(&#39;Median using scipy:&#39;,scipy.median(x))
+
+# Using numpy
+print(&#39;Mode using scipy:&#39;,scipy.stats.mode(x))
+
+Output:
+Median using scipy: 4.0
+Mode using scipy: ModeResult(mode=array([5]), count=array([3]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;standard-deviation&#34;&gt;Standard deviation:&lt;/h3&gt;
+
+&lt;p&gt;Standard deviation represents the spread of a data within a distribution. That is how much a datapoint is deviating from its mean. Generally for a normal distribution, there will be a ~68% confidence that a datapoint lies with +/- 1 standard deviation.
+In the equation below, you can see that it is the root of fraction of sum of squares of the deviation of a data point from its mean to total degrees of freedom.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://akhilesh-reddy.github.io/img/stddev.png&#34; width=&#34;200&#34;/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x = [1,2,3,4,5]
+
+# Using numpy
+print(&#39;Stddev using numpy:&#39;,np.std(x))
+
+# Using scipy
+print(&#39;Stddev using scipy:&#39;,scipy.std(x))
+
+# Using statistics module in python : Population standard deviation
+print(&#39;Stddev using statistics module:&#39;,statistics.pstdev(x))
+
+# Using statistics module in python: sample standard deviation
+print(&#39;Stddev using statistics module:&#39;,statistics.stdev(x))
+
+Output:  
+Stddev using numpy: 1.4142135623730951
+Stddev using scipy: 1.4142135623730951
+Stddev using statistics module: 1.4142135623730951
+Stddev using statistics module: 1.5811388300841898
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Statistics module actually gives 2 different types of stddev function population standard deviation and sample standard deviation and have to be used according to the type of data that we have.
+However, for numpy and scipy,the default function is population standard deviation&lt;/p&gt;
+
+&lt;h3 id=&#34;variance&#34;&gt;Variance:&lt;/h3&gt;
+
+&lt;p&gt;Variance is the expectation of the standard deviation and is also used to calculate the spread of the data
+&lt;img src=&#34;https://akhilesh-reddy.github.io/img/variance.png&#34; width=&#34;200&#34;/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x = [1,2,3,4,5]
+
+# Using numpy
+print(&#39;Variance using numpy:&#39;,np.var(x))
+
+# Using scipy
+print(&#39;Variance using scipy:&#39;,scipy.var(x))
+
+# Using statistics module in python : Population standard deviation
+print(&#39;Variance using statistics module:&#39;,statistics.pvariance(x))
+
+# Using statistics module in python: sample standard deviation
+print(&#39;Variance using statistics module:&#39;,statistics.variance(x))
+
+Output:  
+Variance using numpy: 2.0
+Variance using scipy: 2.0
+Variance using statistics module: 2
+Variance using statistics module: 2.5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fun fact:
+Mean and variance satisfy the property of sufficiency which means that they can be used to explain the properties of data. They in a way helps us to reduce the complexity of the data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mathematics of sufficiency:&lt;/strong&gt;&lt;br /&gt;
+Conditional distribution:&lt;/p&gt;
+
+&lt;h3 id=&#34;key-concepts-before-hypothesis-testing&#34;&gt;Key concepts before hypothesis testing:&lt;/h3&gt;
+
+&lt;p&gt;Before going into the hypothesis tests, we need to be very clear with the terminology and the key basic concepts that will be used in hypothesis testing like significance interval, confidence interval e.t.c.
+ In the next section, we will discuss these concepts in detail and then move to the hypothesis tests&lt;/p&gt;
+
+&lt;h4 id=&#34;null-hypothesis&#34;&gt;Null hypothesis:&lt;/h4&gt;
+
+&lt;p&gt;It is a default statement that there is no relationship between two entites or events.&lt;/p&gt;
+
+&lt;h4 id=&#34;alternative-hypothesis&#34;&gt;Alternative hypothesis:&lt;/h4&gt;
+
+&lt;p&gt;Hypothesis that we support when we reject the null hypothesis based on the significance of the results.&lt;/p&gt;
+
+&lt;h4 id=&#34;test-statistic&#34;&gt;test-statistic:&lt;/h4&gt;
+
+&lt;p&gt;A test-statistic is a random variable that is calculated from the data to be used in the hypothesis testing. It is used to calculate the p-value based on which we reject or accept the null hypothesis.&lt;/p&gt;
+
+&lt;h4 id=&#34;p-value&#34;&gt;p_value:&lt;/h4&gt;
+
+&lt;p&gt;P value talks abuot the statistical significance of the results of a hypothesis test. Generally, 0.05 is a standard p-value that statisticians consider while performing the hypothesis test. If the p-value is less than 0.05, we reject the null hypothesis, but if the p-value is
+higher than 0.05, we concude that we do not have evidence to reject the null hypothesis. It also corresponds to 95% confidence interval. In some clinial trials, statisticians even consider 0.01 p-value due to the need of higher confidence interval.&lt;/p&gt;
+
+&lt;p&gt;For example, in terms of linear regression, if want to test if there is a relationship between independent variable and dependent variable we can do hypothesis testing.Our null hypothesis would be that there is no relation between the variables and
+the alternative hypothesis would be that the relationship does exist. If we get a p-value less than 0.05, we reject the null hypothesis that there is no relationship and conclude that there is indeed relationship between both variables.&lt;/p&gt;
+
+&lt;h4 id=&#34;significance-interval&#34;&gt;Significance interval:&lt;/h4&gt;
+
+&lt;h4 id=&#34;confidence-interval&#34;&gt;Confidence interval:&lt;/h4&gt;
+
+&lt;p&gt;A confidence interval helps in assessing the margin of error of the prediction. Confidence intervals contain the point estimate of the population mean and the range represents the uncertainty about the where the population mean could lie.
+As this point estimate is coming from one sample of data, confidence intervals represent that point estimates taken from different samples of data will lie between the lower and upper bounds of the confidence intervals.&lt;/p&gt;
+
+&lt;p&gt;We also cannot calculate the probability of the population mean using the sample data.&lt;/p&gt;
+
+&lt;p&gt;p-value and confidence intervals are used to assess the statistical significance of the results.&lt;br /&gt;
+For our example, the P value (0.031) is less than the significance level (0.05), which indicates that our results are statistically significant. Similarly, our 95% confidence interval [267 394] does not include the null hypothesis mean of 260 and we draw the same conclusion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-hypothesis-tests-confidence-intervals-and-confidence-levels&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;z-statistic&#34;&gt;Z-statistic:&lt;/h4&gt;
+
+&lt;p&gt;Z-statistic is a standardized random sampling distribution of the x-values that are picked from a normal distribution. It reflects the number of standard deviations or standard errors that the value is away from the mean of the distribution.&lt;/p&gt;
+
+&lt;p&gt;$$ Z = \frac{x - \mu}{\sigma}$$
+where x is the value, $\mu$ is the mean and $\sigma$ is the standard deviation&lt;/p&gt;
+
+&lt;h4 id=&#34;t-statistic&#34;&gt;t-statistic:&lt;/h4&gt;
+
+&lt;p&gt;The T Statistic is used in a T test when you are deciding if you should support or reject the null hypothesis. It’s very similar to a Z-score and you use it in the same way: find a cut off point, find your t score, and compare the two. You use the t statistic when you have a small sample size, or if you don’t know the population standard deviation.&lt;br /&gt;
+When you run a hypothesis test, you use the T statistic with a p value. The p-value tells you what the odds are that your results could have happened by chance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is a T Statistic?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The T Statistic is used in a T test when you are deciding if you should support or reject the null hypothesis. It’s very similar to a Z-score and you use it in the same way: find a cut off point, find your t score, and compare the two. You use the t statistic when you have a small sample size, or if you don’t know the population standard deviation.&lt;/p&gt;
+
+&lt;p&gt;The T statistic doesn’t really tell you much on its own. It’s like the word “average” doesn’t mean anything on it’s own either, without some context. If I say “the average was 150,” it means nothing. If I say “the average weight of dogs seen in a veterinary office was 50lbs,” then the picture becomes clearer. In the same way, you need some more information along with your t statistic for it to make sense. You get this information by taking a sample and running a hypothesis test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is the T Statistic used for?&lt;/strong&gt;&lt;br /&gt;
+When you run a hypothesis test, you use the T statistic with a p value. The p-value tells you what the odds are that your results could have happened by chance. Let’s say you and a group of friends score an average of 205 on a bowling game. You know the average bowler scores 79.7. Should you and your friends consider professional bowling? Or are those scores a fluke? Finding the t statistic and the probability value will give you a good idea. More technically, finding those values will give you evidence of a significant difference between your team’s mean and the population mean (i.e. everyone).&lt;/p&gt;
+
+&lt;p&gt;The greater the T, the more evidence you have that your team’s scores are significantly different from average. A smaller T value is evidence that your team’s score is not significantly different from average. It’s pretty obvious that your team’s score (205) is significantly different from 79.7, so you’d want to take a look at the probability value. If the p-value is larger than 5%, the odds are your team getting those scores are due to chance. Very small (under 5%), you’re onto something: think about going professional.&lt;/p&gt;
+
+&lt;h4 id=&#34;t-score-vs-z-score&#34;&gt;T Score vs. Z-Score&lt;/h4&gt;
+
+&lt;p&gt;The Z-score allows you to decide if your sample is different from the population mean. In order to use z, you must know four things:&lt;/p&gt;
+
+&lt;p&gt;The population mean.
+The population standard deviation.
+The sample mean.
+The sample size.
+Usually in stats, you don’t know anything about a population, so instead of a Z score you use a T Test with a T Statistic. The major difference between using a Z score and a T statistic is that you have to estimate the population standard deviation. The T test is also used if you have a small sample size (less than 30).&lt;/p&gt;
+
+&lt;h4 id=&#34;f-statistic&#34;&gt;F-statistic:&lt;/h4&gt;
+
+&lt;p&gt;An F statistic is a value you get when you run an ANOVA test or a regression analysis to find out if the means between two populations are significantly different. It’s similar to a T statistic from a T-Test; A-T test will tell you if a single variable is statistically significant and an F test will tell you if a group of variables are jointly significant.&lt;br /&gt;
+&lt;a href=&#34;https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/f-statistic-value-test/&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;F value = variance of the group means (Mean Square Between) / mean of the within group variances (Mean Squared Error)&lt;/p&gt;
+
+&lt;h4 id=&#34;chi-square-statistic&#34;&gt;Chi-square statistic:&lt;/h4&gt;
+
+&lt;h3 id=&#34;statistical-hypothesis-tests&#34;&gt;Statistical Hypothesis tests:&lt;/h3&gt;
+
+&lt;p&gt;Along with python implementations or syntax:&lt;/p&gt;
+
+&lt;h4 id=&#34;z-test&#34;&gt;Z-test:&lt;/h4&gt;
+
+&lt;p&gt;For more information:&lt;/p&gt;
+
+&lt;h4 id=&#34;t-test&#34;&gt;t-test:&lt;/h4&gt;
+
+&lt;p&gt;For more information:
+One sample test:&lt;br /&gt;
+Independent sample test:
+Pair sample test:&lt;/p&gt;
+
+&lt;h4 id=&#34;anova&#34;&gt;ANOVA:&lt;/h4&gt;
+
+&lt;p&gt;The one-way analysis of variance (ANOVA) is used to determine whether there are any statistically significant differences between the means of three or more independent (unrelated) groups.&lt;br /&gt;
+&lt;a href=&#34;https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide.php&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;How to run ANOVA in python?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;chisquare-test&#34;&gt;Chisquare test:&lt;/h4&gt;
+
+&lt;p&gt;For more information:&lt;/p&gt;
+
+&lt;h4 id=&#34;pearson-correlation-test&#34;&gt;Pearson correlation test:&lt;/h4&gt;
+
+&lt;p&gt;For more information:&lt;/p&gt;
+
+&lt;h4 id=&#34;spearman-correlation-test&#34;&gt;Spearman correlation test:&lt;/h4&gt;
+
+&lt;p&gt;For more information:&lt;/p&gt;
+
+&lt;p&gt;References:&lt;br /&gt;
+[1] &lt;a href=&#34;https://www.overleaf.com/learn/latex/Integrals,_sums_and_limits&#34; target=&#34;_blank&#34;&gt;https://www.overleaf.com/learn/latex/Integrals,_sums_and_limits&lt;/a&gt;&lt;br /&gt;
+[2] &lt;a href=&#34;https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/&lt;/a&gt;&lt;br /&gt;
+[3] &lt;a href=&#34;https://docs.python.org/3/library/statistics.html&#34; target=&#34;_blank&#34;&gt;https://docs.python.org/3/library/statistics.html&lt;/a&gt;&lt;br /&gt;
+[4] &lt;a href=&#34;https://towardsdatascience.com/inferential-statistics-series-t-test-using-numpy-2718f8f9bf2f&#34; target=&#34;_blank&#34;&gt;https://towardsdatascience.com/inferential-statistics-series-t-test-using-numpy-2718f8f9bf2f&lt;/a&gt;&lt;br /&gt;
+[5] &lt;a href=&#34;https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/basic-statistics/inference/supporting-topics/basics/&#34; target=&#34;_blank&#34;&gt;https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/basic-statistics/inference/supporting-topics/basics/&lt;/a&gt;
+[6]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>ML Algorithms 1:Logistic Regression</title>
       <link>https://akhilesh-reddy.github.io/post/logistic-regression/</link>
       <pubDate>Sun, 13 Jan 2019 00:00:00 -0600</pubDate>
@@ -504,15 +759,6 @@ auc_ROCR
       <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
       
       <guid>https://akhilesh-reddy.github.io/project/association-between-retail-items/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Author attribution using TF-IDF, PCA and Randomforest</title>
-      <link>https://akhilesh-reddy.github.io/project/author-attribution/</link>
-      <pubDate>Fri, 19 Jan 2018 06:31:29 -0500</pubDate>
-      
-      <guid>https://akhilesh-reddy.github.io/project/author-attribution/</guid>
       <description></description>
     </item>
     
